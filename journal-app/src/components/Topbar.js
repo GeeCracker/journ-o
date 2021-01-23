@@ -17,7 +17,7 @@ class Topbar extends React.Component {
     render() {
         return (
             <div class="topbar">
-                <div class="topbar-title">Journ-o</div>
+                <div class="topbar-title">journ-o</div>
                 <div class="outline-button">sign out</div>
             </div>
         );

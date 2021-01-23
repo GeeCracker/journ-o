@@ -97,3 +97,82 @@
     margin: auto;
     margin-top: 10px;
 }
+
+/*=== New Journal Screen styles ===*/
+.new-title {
+    margin-left: 25vw;
+    margin-top: 20vh;
+    color: white;
+    font-size: 6vh;
+    font-weight: bold;
+}
+
+.navbar-box {
+    position: absolute;
+    width: 65vw;
+    height: 50px;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow-left {
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent; 
+    border-right:50px solid #16C79A;
+    transition: 0.3s ease;
+}
+
+.arrow-left:hover {
+    border-right: 40px solid #16C79A; 
+}
+
+.arrow-right {
+    position: absolute;
+    right: 0;
+    width: 0; 
+    height: 0; 
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 50px solid #16C79A;
+    transition: 0.3s ease;
+  }
+
+  .arrow-right:hover {
+    border-left: 40px solid #16C79A;
+  }
+
+  .progbar {
+    position: absolute;
+    width: 50vw;
+    height: 5px;
+    background-color: #11698E;
+    left: 50%;
+    margin-top: 2vh;
+    transform: translate(-50%, 0);
+  }
+
+  .done-full-button {
+    position: absolute;
+    padding: 10px 50px;
+    display: block;
+    border-radius: 100px;
+    border-width: 2px;
+    font-size: 16px;
+    transition: 0.3s ease;
+    top: 87%;
+    left: 64%;
+    border-color: #16C79A;
+    background-color: transparent;
+    color: #16C79A;
+}
+
+.done-full-button:hover {
+    border-color: transparent;
+    background-color: #16C79A;
+    color: white;
+    font-weight: bold;
+}
