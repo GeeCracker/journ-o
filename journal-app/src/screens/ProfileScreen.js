@@ -24,18 +24,20 @@ class Profile extends React.Component {
 
     render() {
       return (
-        <>
+        <div style={{position:'absolute',overflow:'hidden',width:'100vw',height:'100vh'}}>
 
-        <Topbar />
         <div class="profile-left">
+          <div class="profile-circle"></div>
           <div class="profile-name">{this.state.username}</div>
         </div>
         <div class="profile-right">
-          <div class="full-button" onClick={this.newJournal}>New Journ-o</div>
+          <button class="full-button" onClick={this.newJournal}>New Journ-o</button>
           <JournalList />
         </div>
 
-        </>
+        <Topbar />
+
+        </div>
       );
     }
   }

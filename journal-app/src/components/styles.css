@@ -1,5 +1,6 @@
 
 .topbar {
+    position: absolute;
     margin: 0;
     padding-left: 10vw;
     padding-right: 10vw;
@@ -35,6 +36,7 @@
     font-weight: bold;
 }
 
+/*=== Journals list styling ===*/
 .journal-box {
     position: relative;
     display: block;
@@ -42,24 +44,31 @@
 }
 
 .journal-box .date{
-    font-size: 14pt;
+    font-size: 2vh;
     float: left;
     height: 100%;
     padding-top: 5px;
 }
 
 .journal-box .entry{
-    margin-left: 10%;
-    width: 90%;
+    margin-left: 12%;
+    width: 85%;
     height: fit-content;
 }
 
 .journal-box .entry .title{
-    font-size: 24pt;
-    font-weight: bold;
+    font-size: 3vh;
+    height: fit-content;
+    color: #19456B;
+}
+
+.journal-box .entry .content{
+    margin-top: 1px;
+    font-size: 2vh;
     height: fit-content;
 }
 
+/*=== login form styling ===*/
 .form {
     align-content: center;
 }
