@@ -1,13 +1,60 @@
 /*=== Styles for profile screen ===*/
 .profile-left {
     position: absolute;
-    width: 40vw;
+    width: 35vw;
+    height: 70vh;
+    margin-top: 15vh;
+    border-right: 2px solid #19456B;
 }
 
 .profile-right {
     position: absolute;
-    width: 60vw;
-    margin-left: 40vw;
+    width: 64vw;
+    max-height: 85vh;
+    margin-left: 37vw;
+    margin-top: 15vh;
+    overflow-y: scroll;
+}
+
+.profile-circle {
+    position: absolute;
+    height: 10vw;
+    width: 10vw;
+    border-radius: 200vh;
+    background-color: #19456B;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-left: 5vw;
+}
+
+.profile-name {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-left: 16vw;
+    font-size: 4vh;
+    font-weight: bold;
+    color: #19456B;
+}
+
+.full-button {
+    padding: 10px 50px;
+    display: block;
+    border-radius: 100px;
+    border-width: 2px;
+    border-color: transparent;
+    background-color: #16C79A;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.full-button:hover {
+    border-color: #16C79A;
+    background-color: transparent;
+    color: #16C79A;
+    font-weight: bold;
 }
 
 /*=== Styles for login screen ===*/

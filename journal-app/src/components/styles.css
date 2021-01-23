@@ -1,5 +1,6 @@
 
 .topbar {
+    position: absolute;
     margin: 0;
     padding-left: 10vw;
     padding-right: 10vw;
