@@ -37,7 +37,19 @@ class SignupForm extends React.Component {
         alert('A name was submitted: ' + this.state.username);
         alert('A password was submitted: ' + this.state.password);
         alert('A email was submitted: ' + this.state.email);
-        event.preventDefault();
+        firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
+            .then((userCredential) => {
+                // Signed in 
+                var user = userCredential.user;
+                alert("signed in");
+                // ...
+            })
+            .catch((error) => {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                alert(errorMessage);
+                // ..
+            });
         const itemsRef = firebase.database().ref('users');
         const item = {
             user: this.state.username,
@@ -50,6 +62,7 @@ class SignupForm extends React.Component {
             pass: '',
             email: ''
         });
+        event.preventDefault();
     }
     
       render() {
