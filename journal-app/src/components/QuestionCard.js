@@ -34,7 +34,7 @@ class QuestionCard extends React.Component {
                             />
                         ))
                         : 
-                            <input type='text' class="qcard-write" placeholder="type here..."/>
+                        <input type='text' class="qcard-write" placeholder="type here..."/>
                         }
                     </div>
                 </div>
