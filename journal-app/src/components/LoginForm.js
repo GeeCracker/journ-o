@@ -1,22 +1,24 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
+import firebase from '../firebase.js';
 
 class LoginForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: '',
-            password: ''
+            email: '',
+            password: '',
+            userid: ''
         };
     
-        this.usernameChanged = this.usernameChanged.bind(this);
+        this.emailChanged = this.emailChanged.bind(this);
         this.passwordChanged = this.passwordChanged.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     
-    usernameChanged(event) {
-        this.setState({username: event.target.value});
+    emailChanged(event) {
+        this.setState({email: event.target.value});
     }
 
     passwordChanged(event) {
@@ -25,8 +27,20 @@ class LoginForm extends React.Component {
 
     handleSubmit(event) {
         // SUBMIT BUTTON EVENT HANDLER
-        alert('A name was submitted: ' + this.state.username);
+        alert('A name was submitted: ' + this.state.email);
         alert('A password was submitted: ' + this.state.password);
+        firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
+            .then((userCredential) => {
+                // Signed in
+                var user = userCredential.user;
+                alert("signed in");
+                // ...
+            })
+            .catch((error) => {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                alert(errorMessage);
+            });
         event.preventDefault();
     }
     
@@ -36,8 +50,8 @@ class LoginForm extends React.Component {
 
             <form onSubmit={this.handleSubmit}>
                 <label>
-                    username:
-                    <input type="text" value={this.state.username} onChange={this.usernameChanged} />
+                    email:
+                    <input type="text" value={this.state.email} onChange={this.emailChanged} />
                 </label>
                 <label>
                     password:
