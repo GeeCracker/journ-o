@@ -1,4 +1,4 @@
-
+/*=== Topbar styles ===*/
 .topbar {
     position: absolute;
     margin: 0;
@@ -125,4 +125,40 @@ input[type=submit]:hover {
     background-color: transparent;
     border-color: #16C79A;
     color: #16C79A;
+}
+
+/*=== Styles for question card ===*/
+.qcard {
+    position: absolute;
+    height: 50vh;
+    width: 50vw;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #11698E;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.qcard-top {
+    height: 45%;
+    background-color: white;
+}
+
+.qcard-top .box {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 3vh;
+    top: 22.5%;
+    transform: translate(0, -50%);
+}
+
+.qcard-bottom .box {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 72.5%;
+    transform: translate(0, -50%);
+    flex-direction: row;
 }
