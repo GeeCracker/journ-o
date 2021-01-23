@@ -1,5 +1,7 @@
 import React from 'react';
 
+import LoginForm from '../components/LoginForm';
+
 import { Link } from 'react-router-dom';
 
 class Login extends React.Component {
@@ -10,6 +12,8 @@ class Login extends React.Component {
         <Link to="/profile">clickme</Link>
 
         <h1>login screen</h1>
+
+        <LoginForm />
 
         </>
       );
