@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
+import firebase from '../firebase.js';
 
 class SignupForm extends React.Component {
     constructor(props) {
@@ -35,6 +36,18 @@ class SignupForm extends React.Component {
         alert('A password was submitted: ' + this.state.password);
         alert('A email was submitted: ' + this.state.email);
         event.preventDefault();
+        const itemsRef = firebase.database().ref('users');
+        const item = {
+            user: this.state.username,
+            pass: this.state.password,
+            email: this.state.email
+        }
+        itemsRef.push(item);
+        this.setState({
+            user: '',
+            pass: '',
+            email: ''
+        });
     }
     
       render() {
