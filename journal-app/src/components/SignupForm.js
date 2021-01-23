@@ -11,7 +11,8 @@ class SignupForm extends React.Component {
         this.state = {
             username: '',
             password: '',
-            email: ''
+            email: '',
+            userid: ''
         };
     
         this.usernameChanged = this.usernameChanged.bind(this);
@@ -33,15 +34,24 @@ class SignupForm extends React.Component {
     }
 
     handleSubmit(event) {
+        alert('test')
         // SUBMIT BUTTON EVENT HANDLER
-        alert('A name was submitted: ' + this.state.username);
-        alert('A password was submitted: ' + this.state.password);
-        alert('A email was submitted: ' + this.state.email);
+        //alert('A name was submitted: ' + this.state.username);
+        //alert('A password was submitted: ' + this.state.password);
+        //alert('A email was submitted: ' + this.state.email);
         firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
             .then((userCredential) => {
+                alert("signed in");
                 // Signed in 
                 var user = userCredential.user;
-                alert("signed in");
+                var uid = user.uid;
+                this.setState({userid: uid})
+                firebase.database().ref('/users/'+this.state.userid).set({
+                    logins: 1,
+                    email: this.state.email,
+                    user: this.state.username,
+                    password: this.state.password
+                })
                 // ...
             })
             .catch((error) => {
@@ -50,20 +60,10 @@ class SignupForm extends React.Component {
                 alert(errorMessage);
                 // ..
             });
-        const itemsRef = firebase.database().ref('users');
-        const item = {
-            user: this.state.username,
-            pass: this.state.password,
-            email: this.state.email
-        }
-        itemsRef.push(item);
-        this.setState({
-            user: '',
-            pass: '',
-            email: ''
-        });
+    
         event.preventDefault();
     }
+
     
       render() {
         return (

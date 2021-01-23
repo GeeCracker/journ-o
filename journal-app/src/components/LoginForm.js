@@ -29,13 +29,20 @@ class LoginForm extends React.Component {
 
     handleSubmit(event) {
         // SUBMIT BUTTON EVENT HANDLER
-        alert('A name was submitted: ' + this.state.email);
-        alert('A password was submitted: ' + this.state.password);
+        //alert('A name was submitted: ' + this.state.email);
+        //alert('A password was submitted: ' + this.state.password);
         firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
             .then((userCredential) => {
                 // Signed in
                 var user = userCredential.user;
                 alert("signed in");
+                var uid = user.uid;
+                this.setState({userid: uid})
+                // add a login
+                var logs = this.getLogins(this.state.userid)
+                firebase.database().ref('/users/'+this.state.userid).update({
+                    logins: logs+1
+                })
                 // ...
             })
             .catch((error) => {
@@ -44,6 +51,15 @@ class LoginForm extends React.Component {
                 alert(errorMessage);
             });
         event.preventDefault();
+    }
+
+    getLogins(uid){
+        var logins = 1;
+        firebase.database().ref('/users/'+uid+'/logins').on("value", function(snapshot){
+            logins = snapshot.val();
+        })
+        return logins
+
     }
     
       render() {
