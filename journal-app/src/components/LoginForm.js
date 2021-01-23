@@ -4,6 +4,7 @@ import './styles.css';
 
 import { Link } from 'react-router-dom';
 import firebase from '../firebase.js';
+import { Redirect } from 'react-router';
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -11,7 +12,8 @@ class LoginForm extends React.Component {
         this.state = {
             email: '',
             password: '',
-            userid: ''
+            userid: '',
+            loggedin: false
         };
     
         this.emailChanged = this.emailChanged.bind(this);
@@ -35,7 +37,6 @@ class LoginForm extends React.Component {
             .then((userCredential) => {
                 // Signed in
                 var user = userCredential.user;
-                alert("signed in");
                 var uid = user.uid;
                 this.setState({userid: uid})
                 // add a login
@@ -43,6 +44,7 @@ class LoginForm extends React.Component {
                 firebase.database().ref('/users/'+this.state.userid).update({
                     logins: logs+1
                 })
+                this.setState({loggedin: true})
                 // ...
             })
             .catch((error) => {
@@ -63,23 +65,26 @@ class LoginForm extends React.Component {
     }
     
       render() {
+          
+        if (this.state.loggedin === true) {
+            return <Redirect to='/profile' />
+        }
+
         return (
             <div class="form">
 
             <div class="form-title">Log in</div>
-
-            <form onSubmit={this.handleSubmit}>
-                <label>
-                    email:
-                    <input type="text" value={this.state.email} onChange={this.emailChanged} />
-                </label>
-                <label>
-                    password:
-                    <input type="text" value={this.state.password} onChange={this.passwordChanged} />
-                </label>
-                <input type="submit" value="GO" />
-            </form>
-
+                <form onSubmit={this.handleSubmit}>
+                    <label>
+                        email:
+                        <input type="text" value={this.state.email} onChange={this.emailChanged} />
+                    </label>
+                    <label>
+                        password:
+                        <input type="text" value={this.state.password} onChange={this.passwordChanged} />
+                    </label>
+                    <input type="submit" value="GO" />
+                </form>
             </div>
         );
       }
