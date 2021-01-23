@@ -1,0 +1,61 @@
+
+.topbar {
+    margin: 0;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    width: 80vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 50px;
+    background-color: #11698E;
+    flex-direction: row;
+}
+
+.topbar-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    float: left;
+}
+
+.outline-button {
+    border: 2px solid white;
+    border-radius: 100px;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 6px;
+    width: 100px;
+    float: right;
+    align-self: flex-end;
+}
+
+.outline-button:hover {
+    font-weight: bold;
+}
+
+.journal-box {
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.journal-box .date{
+    font-size: 14pt;
+    float: left;
+    height: 100%;
+    padding-top: 5px;
+}
+
+.journal-box .entry{
+    margin-left: 10%;
+    width: 90%;
+    height: fit-content;
+}
+
+.journal-box .entry .title{
+    font-size: 24pt;
+    font-weight: bold;
+    height: fit-content;
+}
