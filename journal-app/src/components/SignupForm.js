@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './styles.css';
+
 import { Link } from 'react-router-dom';
 import firebase from '../firebase.js';
 
@@ -52,7 +54,9 @@ class SignupForm extends React.Component {
     
       render() {
         return (
-            <>
+            <div class="form">
+
+            <div class="form-title">Sign up</div>
 
             <form onSubmit={this.handleSubmit}>
                 <label>
@@ -74,7 +78,7 @@ class SignupForm extends React.Component {
                 <input type="submit" value="Submit" />
             </form>
 
-            </>
+            </div>
         );
       }
   }

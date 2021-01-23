@@ -25,21 +25,21 @@ class Login extends React.Component {
       return (
         <>
 
-        <Link to="/profile">clickme</Link>
-
-        {this.state.signup ? 
-            <>
-                <h1>signup screen</h1> 
-                <SignupForm />
-            </>:
-            <>
-                <h1>login screen</h1>
-                <LoginForm />
-            </>
-        }
-
-        <button onClick={this.toLogin}>login</button>
-        <button onClick={this.toSignup}>signup</button>
+        <div class="login-left">
+            <div class="login-title">journ-o</div>
+        </div>
+        <div class="login-right">
+            {this.state.signup ? 
+                <>
+                    <SignupForm />
+                    <button class="login-line-button" onClick={this.toLogin}>login</button>
+                </>:
+                <>
+                    <LoginForm />
+                    <button class="login-line-button" onClick={this.toSignup}>signup</button>
+                </>
+            }
+        </div>
 
         </>
       );

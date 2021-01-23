@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './styles.css';
+
 import { Link } from 'react-router-dom';
 
 class LoginForm extends React.Component {
@@ -32,7 +34,9 @@ class LoginForm extends React.Component {
     
       render() {
         return (
-            <>
+            <div class="form">
+
+            <div class="form-title">Log in</div>
 
             <form onSubmit={this.handleSubmit}>
                 <label>
@@ -43,10 +47,10 @@ class LoginForm extends React.Component {
                     password:
                     <input type="text" value={this.state.password} onChange={this.passwordChanged} />
                 </label>
-                <input type="submit" value="Submit" />
+                <input type="submit" value="GO" />
             </form>
 
-            </>
+            </div>
         );
       }
   }
