@@ -97,3 +97,31 @@
     margin: auto;
     margin-top: 10px;
 }
+
+/*=== New Journal Screen styles ===*/
+.new-title {
+    margin-left: 25vw;
+    margin-top: 20vh;
+    color: white;
+    font-size: 6vh;
+    font-weight: bold;
+}
+
+.navbar-box {
+    position: absolute;
+    width: 65vw;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid red;
+}
+
+.arrow-left {
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent; 
+    
+    border-right:50px solid white; 
+}

@@ -33,6 +33,7 @@ class NewJournal extends React.Component {
       ],
       currentQuestion: 0,
       currentChoice: 0,
+      date: 'Jan 25, 2021'
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -47,11 +48,19 @@ class NewJournal extends React.Component {
         <div style={{position:'absolute',backgroundColor: '#19456B',height:'100vh',width:'100vw'}}>
 
           <Topbar />
+
+          <div class="new-title">{this.state.date}</div>
+
           <QuestionCard  
             question={this.state.questions[this.state.currentQuestion]}
+            type={this.state.questions[this.state.currentQuestion].type}
             choice={this.state.currentChoice}
             handleClick={this.handleClick}
             />
+          
+          <div class="navbar-box">
+            <div class="arrow-left"></div>
+          </div>
         
         </div>
       );

@@ -162,3 +162,11 @@ input[type=submit]:hover {
     transform: translate(0, -50%);
     flex-direction: row;
 }
+
+.box input {
+    width: 400px;
+    height: 40px;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    font-size: 20px;
+}
