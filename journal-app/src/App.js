@@ -1,10 +1,12 @@
 import './App.css';
 
+import Login from './screens/LoginScreen';
+import Profile from './screens/ProfileScreen';
+import NewJournal from './screens/NewJournalScreen';
+
 function App() {
   return (
-    <div className="App">
-      Test
-    </div>
+    <Login />
   );
 }
 
