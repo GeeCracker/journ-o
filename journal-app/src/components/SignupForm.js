@@ -4,6 +4,7 @@ import './styles.css';
 
 import { Link } from 'react-router-dom';
 import firebase from '../firebase.js';
+import { Redirect } from 'react-router';
 
 class SignupForm extends React.Component {
     constructor(props) {
@@ -12,7 +13,8 @@ class SignupForm extends React.Component {
             username: '',
             password: '',
             email: '',
-            userid: ''
+            userid: '',
+            loggedin: false
         };
     
         this.usernameChanged = this.usernameChanged.bind(this);
@@ -34,14 +36,12 @@ class SignupForm extends React.Component {
     }
 
     handleSubmit(event) {
-        alert('test')
         // SUBMIT BUTTON EVENT HANDLER
         //alert('A name was submitted: ' + this.state.username);
         //alert('A password was submitted: ' + this.state.password);
         //alert('A email was submitted: ' + this.state.email);
         firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
             .then((userCredential) => {
-                alert("signed in");
                 // Signed in 
                 var user = userCredential.user;
                 var uid = user.uid;
@@ -52,6 +52,7 @@ class SignupForm extends React.Component {
                     user: this.state.username,
                     password: this.state.password
                 })
+                this.setState({loggedin: true})
                 // ...
             })
             .catch((error) => {
@@ -66,6 +67,11 @@ class SignupForm extends React.Component {
 
     
       render() {
+
+        if (this.state.loggedin === true) {
+            return <Redirect to='/profile' />
+        }
+
         return (
             <div class="form">
 
