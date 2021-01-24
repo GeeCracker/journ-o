@@ -1,0 +1,592 @@
+{
+    "StartingQuestions": [
+        [1,7,13,18],
+        {
+            "id": 1,
+            "type": "mc",
+            "question": "How was my day?",
+            "choices": [
+                {
+                    "answer": "Amazing!",
+                    "output": "My day was amazing!",
+                    "targetid": 2,
+                    "picked": 0
+                },
+                {
+                    "answer": "Pretty good",
+                    "output": "My day was pretty good,",
+                    "targetid": 3,
+                    "picked": 0
+                },
+                {
+                    "answer": "Ok.",
+                    "output": "My day was ok,",
+                    "targetid": 4,
+                    "picked": 0
+                },
+                {
+                    "answer": "bad.",
+                    "output": "My day was Bad.",
+                    "targetid": 5,
+                    "picked": 0
+                },
+                {
+                    "answer": "absolutely awful...",
+                    "output": "My day was absolutely awful...",
+                    "targetid": 6,
+                    "picked": 0
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "type": "written",
+            "question": "The best thing that happeded today was",
+            "title": "An incredible day"
+        },
+        {
+            "id": 3,
+            "type": "written",
+            "question": "I was able to do",
+            "title": "Good vibes"
+        },
+        {
+            "id": 4,
+            "type": "written",
+            "question": "I don't feel too strongly each way because",
+            "title": "Just another average day"
+        },
+        {
+            "id": 5,
+            "type": "written",
+            "question": "It felt this way because",
+            "title": "Today was not the day"
+        },
+        {
+            "id": 6,
+            "type": "written",
+            "question": "the worst part of it was",
+            "title": "I don't want to remember today"
+        },
+        {
+            "id": 7,
+            "type": "mc",
+            "question": "How productive was I today?",
+            "choices": [
+                {
+                    "answer": "Above and beyond what I hoped!",
+                    "output": "Productivity today was far above what I hoped for!",
+                    "targetid": 8,
+                    "picked": 0
+                },
+                {
+                    "answer": "On par",
+                    "output": "Productivity today was as expected.",
+                    "targetid": 9,
+                    "picked": 0
+                },
+                {
+                    "answer": "Decent",
+                    "output": "Productivity today was decent",
+                    "targetid": 10,
+                    "picked": 0
+                },
+                {
+                    "answer": "Not great",
+                    "output": "Productivity today was not great,",
+                    "targetid": 11,
+                    "picked": 0
+                },
+                {
+                    "answer": "Negative, I'm worse off than before",
+                    "output": "Productivity today was awful, I'm worse off than before.",
+                    "targetid": 12,
+                    "picked": 0
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "type": "written",
+            "question": "Today, I wasn't expecting to be able to do",
+            "title": "No play, all productivity"
+        },
+        {
+            "id": 9,
+            "type": "written",
+            "question": "I was able to get tasks done becuse",
+            "title": "A productive day"
+        },
+        {
+            "id": 10,
+            "type": "written",
+            "question": "overall, the day felt",
+            "title": "Another slightly below average day"
+        },
+        {
+            "id": 11,
+            "type": "written",
+            "question": "I was unproductive because",
+            "title": "No motivation today"
+        },
+        {
+            "id": 12,
+            "type": "written",
+            "question": "I wish that I didn't",
+            "title": "I'm going downhill"
+        },
+        {
+            "id": 13,
+            "type": "mc",
+            "question": "Which best describes my mental health today?",
+            "choices": [
+                {
+                    "answer": "Amazing!",
+                    "output": "Today, my mental health was amazing!",
+                    "targetid": 14,
+                    "picked": 0
+                },
+                {
+                    "answer": "Good",
+                    "output": "My mental health was good today.",
+                    "targetid": 15,
+                    "picked": 0
+                },
+                {
+                    "answer": "Poor",
+                    "output": "Today, my mental health was poor.",
+                    "targetid": 16,
+                    "picked": 0
+                },
+                {
+                    "answer": "Very bad",
+                    "output": "My mental health was very bad today,",
+                    "targetid": 17,
+                    "picked": 0
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "type": "written",
+            "question": "I feel great today because",
+            "title": "A day full of joy"
+        },
+        {
+            "id": 15,
+            "type": "written",
+            "question": "I kept up my mental health by",
+            "title": "I felt good today"
+        },
+        {
+            "id": 16,
+            "type": "written",
+            "question": "My mental health was not great today becuase",
+            "title": "Too much stress today"
+        },
+        {
+            "id": 17,
+            "type": "written",
+            "question": "I plan on improving by",
+            "title": "Today was not a good day"
+        },
+        {
+            "id": 18,
+            "type": "mc",
+            "question": "Did anything out of the ordinary happen today?",
+            "choices": [
+                {
+                    "answer": "something amaing!",
+                    "output": "Today was amazing, guess what happened today?",
+                    "targetid": 19,
+                    "picked": 0
+                },
+                {
+                    "answer": "Something awful",
+                    "output": "Something awful happened today...",
+                    "targetid": 20,
+                    "picked": 0
+                },
+                {
+                    "answer": "Something strange",
+                    "output": "I saw the wackiest things,",
+                    "targetid": 21,
+                    "picked": 0
+                },
+                {
+                    "answer": "Basically nothing.",
+                    "output": "Nothing abnormal today;",
+                    "targetid": 22,
+                    "picked": 0
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "type": "written",
+            "question": "I couldn't believe it,",
+            "title": "An amazing day"
+        },
+        {
+            "id": 20,
+            "type": "written",
+            "question": "I can't believe that",
+            "title": "Not a lucky day"
+        },
+        {
+            "id": 21,
+            "type": "written",
+            "question": "I've never seen something like it! Today, ",
+            "title": "Today was no ordinary day"
+        },
+        {
+            "id": 22,
+            "type": "written",
+            "question": "I didn't see anything interesting because",
+            "title": "Nothing out of the ordinary"
+        }
+    ],
+    "FinalQuestions": [
+        [1, 2, 3, 4],
+        {
+            "id": 1,
+            "type": "written",
+            "question": "If I could sum up today in one word, what would it be?",
+            "output": "Overall, I would describe today as"
+        },
+        {
+            "id": 2,
+            "type": "written",
+            "question": "What am I most looking forward to tomorrow?",
+            "output": "I can't wait for tomorrow, I'm going to"
+        },
+        {
+            "id": 3,
+            "type": "written",
+            "question": "What is something small that I am thankful for today?",
+            "output": "At the end of the day, I am thankful for"
+        },
+        {
+            "id": 4,
+            "type": "mc",
+            "question": "Energy wise, how do I feel?",
+            "choices": [
+                {
+                    "answer": "Amazing",
+                    "output": "In terms of energy, I feel amazing!",
+                    "targetid": 5,
+                    "picked": 0
+                },
+                {
+                    "answer": "Normal",
+                    "output": "In terms of energy, I feel normal;",
+                    "targetid": 6,
+                    "picked": 0
+                },
+                {
+                    "answer": "exhausted.",
+                    "output": "I'm absolutely exhausted.",
+                    "targetid": 7,
+                    "picked": 0
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "type": "written",
+            "question": "I'm glad that I was able to"
+        },
+        {
+            "id": 6,
+            "type": "written",
+            "question": "today wasn't too special becuase"
+        },
+        {
+            "id": 7,
+            "type": "written",
+            "question": "The most tiring thing today was"
+        }
+    ],
+    "MainQuestions": [
+        [1, 5, 6, 7, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
+        {
+            "id": 1,
+            "type": "mc",
+            "question": "Was I attacked by a Canada goose?",
+            "choices": [
+                {
+                    "answer": "many times",
+                    "output": "I barely survived all the geese attacks,",
+                    "targetid": 2,
+                    "picked": 0
+                },
+                {
+                    "answer": "just once",
+                    "output": "A goose tried to nibble me today,",
+                    "targetid": 3,
+                    "picked": 0
+                },
+                {
+                    "answer": "I don't go outside",
+                    "output": "Canadian geese make me too scared to go outside.",
+                    "targetid": 4,
+                    "picked": 0
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "type": "written",
+            "question": "If I see a goose again, I'll"
+        },
+        {
+            "id": 3,
+            "type": "written",
+            "question": "It tried to bite my"
+        },
+        {
+            "id": 4,
+            "type": "written",
+            "question": "I'd rater stay inside,"
+        },
+        {
+            "id": 5,
+            "type": "written",
+            "question": "What was the best thing I did today?",
+            "output": "The best thing I did today was"
+        },
+        {
+            "id": 6,
+            "type": "written",
+            "question": "How much rain was there today?",
+            "output": "In terms of rain, there was"
+        },
+        {
+            "id": 7,
+            "type": "mc",
+            "question": "Did I go outside today",
+            "choices": [
+                {
+                    "answer": "No",
+                    "output": "I didn't leave the house today,",
+                    "targetid": 8,
+                    "picked": 0
+                },
+                {
+                    "answer": "Just for a short walk",
+                    "output": "I went out for a quick walk.",
+                    "targetid": 9,
+                    "picked": 0
+                },
+                {
+                    "answer": "To go to work",
+                    "output": "I went out to work,",
+                    "targetid": 10,
+                    "picked": 0
+                },
+                {
+                    "answer": "To do vigorous exercise",
+                    "output": "I burned lots of calories today,",
+                    "targetid": 11,
+                    "picked": 0
+                },
+                {
+                    "answer": "Other",
+                    "output": "I went outside today,",
+                    "targetid": 12,
+                    "picked": 0
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "type": "written",
+            "question": "this was because"
+        },
+        {
+            "id": 9,
+            "type": "written",
+            "question": "The walk was"
+        },
+        {
+            "id": 10,
+            "type": "written",
+            "question": "work was"
+        },
+        {
+            "id": 11,
+            "type": "written",
+            "question": "I exercised at"
+        },
+        {
+            "id": 12,
+            "type": "written",
+            "question": "I went to"
+        },
+        {
+            "id": 13,
+            "type": "written",
+            "question": "What hobbies did I spend time on today?",
+            "output": "For hobbies, I did"
+        },
+        {
+            "id": 14,
+            "type": "written",
+            "question": "What did you eat today?",
+            "output": "Today I filled my wittle tum-tum with"
+        },
+        {
+            "id": 15,
+            "type": "written",
+            "question": "What friends did I talk to today?",
+            "output": "Today, I talked to my friends"
+        },
+        {
+            "id": 16,
+            "type": "written",
+            "question": "What did I get done that I've been putting off?",
+            "output": "I've been procrastinating for a while, but finally finished"
+        },
+        {
+            "id": 17,
+            "type": "written",
+            "question": "What do I plan on doing tomorrow?",
+            "output": "Tomorrow, I plan on"
+        },
+        {
+            "id": 18,
+            "type": "written",
+            "question": "What did I say that I would do yesterday?",
+            "output": "Yesterday, I said that I would"
+        },
+        {
+            "id": 19,
+            "type": "written",
+            "question": "When part of the day was I the happiest?",
+            "output": "Today, I was very happy when"
+        },
+        {
+            "id": 20,
+            "type": "written",
+            "question": "What was a challenging thing I experienced today?",
+            "output": "I experienced difficulties when"
+        },
+        {
+            "id": 21,
+            "type": "written",
+            "question": "What did I do in my down time?",
+            "output": "For my down time today, I decided to"
+        },
+        {
+            "id": 22,
+            "type": "mc",
+            "question": "Did I stay connected to my family today?",
+            "choices": [
+                {
+                    "answer": "Yes, we talked a lot",
+                    "output": "We talked a lot,",
+                    "targetid": 23,
+                    "picked": 0
+                },
+                {
+                    "answer": "We connected a little bit",
+                    "output": "We had a quick conversation,",
+                    "targetid": 24,
+                    "picked": 0
+                },
+                {
+                    "answer": "No",
+                    "output": "I didn't contact my family today,",
+                    "targetid": 25,
+                    "picked": 0
+                }
+            ]
+        },
+        {
+            "id": 23,
+            "type": "written",
+            "question": "we chatted about"
+        },
+        {
+            "id": 24,
+            "type": "written",
+            "question": "the conversation was about"
+        },
+        {
+            "id": 25,
+            "type": "written",
+            "question": "this was because"
+        }
+    ],
+    "Formats": [
+        {
+            "id": 1,
+            "type": "written",
+            "question": "",
+            "output": ""
+        },
+
+        {
+            "id": 1,
+            "type": "mc",
+            "question": "",
+            "choices": [
+                {
+                    "answer": "",
+                    "output": "",
+                    "targetid": 1,
+                    "picked": 0
+                },
+                {
+                    "answer": "",
+                    "output": "",
+                    "targetid": 1,
+                    "picked": 0
+                },
+                {
+                    "answer": "",
+                    "output": "",
+                    "targetid": 1,
+                    "picked": 0
+                },
+                {
+                    "answer": "",
+                    "output": "",
+                    "targetid": 1,
+                    "picked": 0
+                },
+                {
+                    "answer": "",
+                    "output": "",
+                    "targetid": 1,
+                    "picked": 0
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "type": "written",
+            "question": ""
+        },
+        {
+            "id": 1,
+            "type": "written",
+            "question": ""
+        },
+        {
+            "id": 1,
+            "type": "written",
+            "question": ""
+        },
+        {
+            "id": 1,
+            "type": "written",
+            "question": ""
+        },
+        {
+            "id": 1,
+            "type": "written",
+            "question": ""
+        }
+    ]
+}

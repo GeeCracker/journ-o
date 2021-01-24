@@ -24,7 +24,7 @@ class QuestionCard extends React.Component {
                 </div>
                 <div class="qcard-bottom">
                     <div class="box">
-                        {this.state.isMC ? 
+                        {this.props.type ? 
                         this.props.question.choices.map((item, index) => (
                             <FillButton 
                                 text={item.answer} // answer option text
@@ -32,9 +32,13 @@ class QuestionCard extends React.Component {
                                 index={index} // index of choice
                                 handleClick={this.props.handleClick}
                             />
-                        ))
-                        : 
-                        <input type='text' class="qcard-write" placeholder="type here..."/>
+                        )):
+                        
+                        <label>
+                            Answer:
+                            <input type='text' value={this.props.answer} onChange={this.props.answerChanged}
+                            class="qcard-write" placeholder="Type here..."/>
+                        </label>
                         }
                     </div>
                 </div>

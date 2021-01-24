@@ -24,6 +24,7 @@ class Profile extends React.Component {
       })
       this.setState({username: user})
       
+
     }
 
     newJournal = () => {
