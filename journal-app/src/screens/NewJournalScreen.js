@@ -30,16 +30,26 @@ class NewJournal extends React.Component {
   }
 
   generateFinalQuestion() {
-    var validIds = masterQuestions.StartingQuestions[0];
-    var rand = Math.floor(Math.random() * validIds.length) + 0 ;
-    var q = masterQuestions.StartingQuestions[validIds[rand]];
+    // get question from FinalQuestion list
+    this.setState({stage: 1});
+    var validIds = masterQuestions.FinalQuestions[0];
+    var rand = Math.floor(Math.random() * validIds.length) + 0;
+    var q = masterQuestions.FinalQuestions[validIds[rand]];
     this.setState({
       questions: [...this.state.questions, q],
     });
+    this.setState({currentQuestion: this.state.currentQuestion+1})
   }
 
   generateNextQuestion() {
-
+    this.setState({stage: 2});
+    var validIds = masterQuestions.MainQuestions[0];
+    var rand = Math.floor(Math.random() * validIds.length) + 0;
+    var q = masterQuestions.MainQuestions[validIds[rand]];
+    this.setState({
+      questions: [...this.state.questions, q],
+    });
+    this.setState({currentQuestion: this.state.currentQuestion+1})
   }
 
   gotoNextQuestion() {
@@ -48,6 +58,10 @@ class NewJournal extends React.Component {
     var q
     if(this.state.stage == 0) {
       q = masterQuestions.StartingQuestions[qid];
+    } else if(this.state.stage == 1){
+      q = masterQuestions.FinalQuestions[qid];
+    } else {
+      q = masterQuestions.MainQuestions[qid];
     }
     this.setState({
       questions: [...this.state.questions, q],
@@ -67,8 +81,16 @@ class NewJournal extends React.Component {
   rightClick = () => {
     // right arrow click function
     if (this.state.currentQuestion == this.state.questions.length-1) {
-      if(this.state.currentChoice) {
+      if(this.state.questions[this.state.currentQuestion].type == "mc") {
         this.gotoNextQuestion();
+      } else {
+        // if current stage is initial, move on to final question
+        if(this.state.stage == 0){
+          this.generateFinalQuestion();
+        // if current stage is final question, move onto main questions stage
+        } else if(this.state.stage >= 1){
+          this.generateNextQuestion();
+        }
       }
     } else {
       this.setState({currentQuestion: this.state.currentQuestion+1})
