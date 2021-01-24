@@ -26,6 +26,7 @@ class Profile extends React.Component {
     }
 
     render() {
+      
       return (
         <div style={{position:'absolute',overflow:'hidden',width:'100vw',height:'100vh'}}>
 

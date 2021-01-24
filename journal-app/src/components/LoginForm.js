@@ -44,6 +44,7 @@ class LoginForm extends React.Component {
                 firebase.database().ref('/users/'+this.state.userid).update({
                     logins: logs+1
                 })
+                sessionStorage.setItem('uid',uid)
                 this.setState({loggedin: true})
                 // ...
             })
@@ -53,6 +54,7 @@ class LoginForm extends React.Component {
                 alert(errorMessage);
             });
         event.preventDefault();
+        
     }
 
     getLogins(uid){
