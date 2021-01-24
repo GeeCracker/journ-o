@@ -52,6 +52,7 @@ class SignupForm extends React.Component {
                     user: this.state.username,
                     password: this.state.password
                 })
+                sessionStorage.setItem('uid',uid)
                 this.setState({loggedin: true})
                 // ...
             })
@@ -69,7 +70,7 @@ class SignupForm extends React.Component {
       render() {
 
         if (this.state.loggedin === true) {
-            return <Redirect to='/profile' />
+            return <Redirect to='/profile'/>
         }
 
         return (
