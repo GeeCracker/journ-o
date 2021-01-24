@@ -20,10 +20,13 @@ class NewJournal extends React.Component {
       content: '',
       currentQuestion: 0,
       currentChoice: 0, // current mc question choice index
-      stage: 0 // stage of questions, 0-starting, 1-final, 2-main
+      date: 'Jan 25, 2021',
+      stage: 0, // stage of questions, 0-starting, 1-final, 2-main
+      answer: ''
     };
 
     this.handleClick = this.handleClick.bind(this);
+    this.answerChanged = this.answerChanged.bind(this);
   }
 
   componentWillMount() {
@@ -57,6 +60,10 @@ class NewJournal extends React.Component {
       questions: [...this.state.questions, q],
     });
     this.setState({currentQuestion: this.state.currentQuestion+1})
+  }
+
+  answerChanged(event) {
+    this.setState({answer: event.target.value});
   }
 
   gotoNextQuestion() {
@@ -177,6 +184,8 @@ class NewJournal extends React.Component {
             type={mc}
             choice={this.state.currentChoice} // active button on mc questions
             handleClick={this.handleClick} // button click for an mc question
+            answerChanged={this.answerChanged}
+            answer={this.state.answer}
             />
           
           <div class="navbar-box">
