@@ -337,17 +337,20 @@
         {
             "id": 2,
             "type": "written",
-            "question": "If I see a goose again, I'll"
+            "question": "If I see a goose again, I'll",
+            "output": "If I see a goose again, I'll"
         },
         {
             "id": 3,
             "type": "written",
-            "question": "It tried to bite my"
+            "question": "It tried to bite my",
+            "output": "It tried to bite my"
         },
         {
             "id": 4,
             "type": "written",
-            "question": "I'd rater stay inside,"
+            "question": "I'd rater stay inside,",
+            "output": "I'd rater stay inside,"
         },
         {
             "id": 5,
@@ -401,27 +404,32 @@
         {
             "id": 8,
             "type": "written",
-            "question": "this was because"
+            "question": "this was because",
+            "output": "this was because"
         },
         {
             "id": 9,
             "type": "written",
-            "question": "The walk was"
+            "question": "The walk was",
+            "output": "The walk was"
         },
         {
             "id": 10,
             "type": "written",
-            "question": "work was"
+            "question": "work was",
+            "output": "work was"
         },
         {
             "id": 11,
             "type": "written",
-            "question": "I exercised at"
+            "question": "I exercised at",
+            "output": "I exercised at"
         },
         {
             "id": 12,
             "type": "written",
-            "question": "I went to"
+            "question": "I went to",
+            "output": "I went to"
         },
         {
             "id": 13,
@@ -505,17 +513,20 @@
         {
             "id": 23,
             "type": "written",
-            "question": "we chatted about"
+            "question": "we chatted about",
+            "output": "we chatted about"
         },
         {
             "id": 24,
             "type": "written",
-            "question": "the conversation was about"
+            "question": "the conversation was about",
+            "output": "the conversation was about"
         },
         {
             "id": 25,
             "type": "written",
-            "question": "this was because"
+            "question": "this was because",
+            "output": "this was because"
         }
     ],
     "Formats": [
