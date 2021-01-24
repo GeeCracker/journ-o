@@ -133,17 +133,21 @@ class NewJournal extends React.Component {
         this.saveMCResponse();
         this.gotoNextQuestion();
       } else {
-        // if current stage is initial, move on to final question
-        if(this.state.stage == 0){
-          this.saveTitleResponse();
-          this.generateFinalQuestion();
-        // if current stage is final question, move onto main questions stage
-        } else if(this.state.stage == 1) {
-          this.saveFinalResponse();
-          this.generateNextQuestion();
-        } else if(this.state.stage > 1){
-          this.saveResponse();
-          this.generateNextQuestion();
+        if(this.state.answer){
+          // if current stage is initial, move on to final question
+          if(this.state.stage == 0){
+            this.saveTitleResponse();
+            this.generateFinalQuestion();
+          // if current stage is final question, move onto main questions stage
+          } else if(this.state.stage == 1) {
+            this.saveFinalResponse();
+            this.generateNextQuestion();
+          } else if(this.state.stage > 1){
+            this.saveResponse();
+            this.generateNextQuestion();
+          }
+        } else {
+          alert("Don't leave the text field blank!")
         }
       }
     } else {
