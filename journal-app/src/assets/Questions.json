@@ -1,6 +1,6 @@
 {
     "StartingQuestions": [
-        [1,7,13,18],
+        [1, 7, 13, 18, 23],
         {
             "id": 1,
             "type": "mc",
@@ -13,25 +13,25 @@
                     "picked": 0
                 },
                 {
-                    "answer": "Pretty good",
+                    "answer": "Good!",
                     "output": "My day was pretty good,",
                     "targetid": 3,
                     "picked": 0
                 },
                 {
-                    "answer": "Ok.",
+                    "answer": "Alright.",
                     "output": "My day was ok,",
                     "targetid": 4,
                     "picked": 0
                 },
                 {
-                    "answer": "bad.",
+                    "answer": "Not great.",
                     "output": "My day was Bad.",
                     "targetid": 5,
                     "picked": 0
                 },
                 {
-                    "answer": "absolutely awful...",
+                    "answer": "Absolutely awful...",
                     "output": "My day was absolutely awful...",
                     "targetid": 6,
                     "picked": 0
@@ -53,19 +53,19 @@
         {
             "id": 4,
             "type": "written",
-            "question": "I don't feel too strongly each way because",
+            "question": "It was an average day because",
             "title": "Just another average day"
         },
         {
             "id": 5,
             "type": "written",
-            "question": "It felt this way because",
+            "question": "Today wasn't great because",
             "title": "Today was not the day"
         },
         {
             "id": 6,
             "type": "written",
-            "question": "the worst part of it was",
+            "question": "The worst part of it was",
             "title": "I don't want to remember today"
         },
         {
@@ -74,32 +74,32 @@
             "question": "How productive was I today?",
             "choices": [
                 {
-                    "answer": "Above and beyond what I hoped!",
+                    "answer": "I was a machine!",
                     "output": "Productivity today was far above what I hoped for!",
                     "targetid": 8,
                     "picked": 0
                 },
                 {
-                    "answer": "On par",
-                    "output": "Productivity today was as expected.",
+                    "answer": "Great!",
+                    "output": "My productivity today was as great!",
                     "targetid": 9,
                     "picked": 0
                 },
                 {
-                    "answer": "Decent",
-                    "output": "Productivity today was decent",
+                    "answer": "Alright.",
+                    "output": "My productivity today was decent",
                     "targetid": 10,
                     "picked": 0
                 },
                 {
                     "answer": "Not great",
-                    "output": "Productivity today was not great,",
+                    "output": "My productivity today was not great,",
                     "targetid": 11,
                     "picked": 0
                 },
                 {
                     "answer": "Negative, I'm worse off than before",
-                    "output": "Productivity today was awful, I'm worse off than before.",
+                    "output": "My productivity today was awful, I'm worse off than before.",
                     "targetid": 12,
                     "picked": 0
                 }
@@ -109,7 +109,7 @@
             "id": 8,
             "type": "written",
             "question": "Today, I wasn't expecting to be able to do",
-            "title": "No play, all productivity"
+            "title": "No play, all work"
         },
         {
             "id": 9,
@@ -121,7 +121,7 @@
             "id": 10,
             "type": "written",
             "question": "overall, the day felt",
-            "title": "Another slightly below average day"
+            "title": "Another average day"
         },
         {
             "id": 11,
@@ -147,20 +147,20 @@
                     "picked": 0
                 },
                 {
-                    "answer": "Good",
-                    "output": "My mental health was good today.",
+                    "answer": "Pretty Good!",
+                    "output": "My mental health was good today!",
                     "targetid": 15,
                     "picked": 0
                 },
                 {
-                    "answer": "Poor",
-                    "output": "Today, my mental health was poor.",
+                    "answer": "Alright.",
+                    "output": "Today, I felt a little blue.",
                     "targetid": 16,
                     "picked": 0
                 },
                 {
-                    "answer": "Very bad",
-                    "output": "My mental health was very bad today,",
+                    "answer": "Could use some work.",
+                    "output": "My mental health wasn't great today,",
                     "targetid": 17,
                     "picked": 0
                 }
@@ -169,7 +169,7 @@
         {
             "id": 14,
             "type": "written",
-            "question": "I feel great today because",
+            "question": "I felt great today because",
             "title": "A day full of joy"
         },
         {
@@ -197,19 +197,19 @@
             "choices": [
                 {
                     "answer": "Something amazing!",
-                    "output": "Today was amazing, guess what happened today?",
+                    "output": "Guess what happened today?",
                     "targetid": 19,
                     "picked": 0
                 },
                 {
-                    "answer": "Something awful",
+                    "answer": "Something awful!",
                     "output": "Something awful happened today...",
                     "targetid": 20,
                     "picked": 0
                 },
                 {
-                    "answer": "Something strange",
-                    "output": "I saw the wackiest things,",
+                    "answer": "Something strange?",
+                    "output": "I saw the strangest thing,",
                     "targetid": 21,
                     "picked": 0
                 },
@@ -224,19 +224,19 @@
         {
             "id": 19,
             "type": "written",
-            "question": "I couldn't believe it,",
+            "question": "I couldn't believe my eyes,",
             "title": "An amazing day"
         },
         {
             "id": 20,
             "type": "written",
-            "question": "I can't believe that",
+            "question": "I was shocked to find out",
             "title": "Not a lucky day"
         },
         {
             "id": 21,
             "type": "written",
-            "question": "I've never seen something like it! Today,",
+            "question": "I've never seen anything like it! Today,",
             "title": "Today was no ordinary day"
         },
         {
@@ -244,6 +244,140 @@
             "type": "written",
             "question": "I didn't see anything interesting because",
             "title": "Nothing out of the ordinary"
+        },
+        {
+            "id": 23,
+            "type": "mc",
+            "question": "How was the weather?",
+            "choices": [
+                {
+                    "answer": "Sunny and pleasent!",
+                    "output": "Really nice day today.",
+                    "targetid": 24,
+                    "picked": 0
+                },
+                {
+                    "answer": "It rained.",
+                    "output": "It was a bit yucky out today.",
+                    "targetid": 25,
+                    "picked": 0
+                },
+                {
+                    "answer": "Cloudy, but no rain.",
+                    "output": "Skies were a bit dark today.",
+                    "targetid": 26,
+                    "picked": 0
+                },
+                {
+                    "answer": "Snow!",
+                    "output": "It's a winter wonderland!",
+                    "targetid": 27,
+                    "picked": 0
+                },
+                {
+                    "answer": "Snow.",
+                    "output": "It's freezing out.",
+                    "targetid": 28,
+                    "picked": 0
+                }
+            ]
+        },
+        {
+            "id": 24,
+            "type": "written",
+            "question": "Today I went to",
+            "title": "Sun times fun times"
+        },
+        {
+            "id": 25,
+            "type": "written",
+            "question": "Indoors today I did",
+            "title": "Wet day"
+        },
+        {
+            "id": 26,
+            "type": "written",
+            "question": "Today I did",
+            "title": "Chill day"
+        },
+        {
+            "id": 27,
+            "type": "written",
+            "question": "Today I went out in the snow and",
+            "title": "Super fun day!"
+        },
+        {
+            "id": 28,
+            "type": "written",
+            "question": "I kept warm by",
+            "title": "It was freezing"
+        },
+        {
+            "id": 29,
+            "type": "mc",
+            "question": "",
+            "choices": [
+                {
+                    "answer": "It was a holiday!",
+                    "output": "It's finally that time of year.",
+                    "targetid": 30,
+                    "picked": 0
+                },
+                {
+                    "answer": "There was an event!",
+                    "output": "Today was exciting,",
+                    "targetid": 31,
+                    "picked": 0
+                },
+                {
+                    "answer": "Something happened to me!",
+                    "output": "Something exciting happened to me today,",
+                    "targetid": 32,
+                    "picked": 0
+                },
+                {
+                    "answer": "It's the weekend!",
+                    "output": "TGIF amarite?",
+                    "targetid": 33,
+                    "picked": 0
+                },
+                {
+                    "answer": "Nope, Normal weekday.",
+                    "output": "Is it Friday yet?",
+                    "targetid": 34,
+                    "picked": 0
+                }
+            ]
+        },
+        {
+            "id": 30,
+            "type": "written",
+            "question": "Today is",
+            "title": "It's that time of year!"
+        },
+        {
+            "id": 31,
+            "type": "written",
+            "question": "I participated in",
+            "title": "Good times"
+        },
+        {
+            "id": 32,
+            "type": "written",
+            "question": "I was shocked when",
+            "title": "Exciting times!"
+        },
+        {
+            "id": 33,
+            "type": "written",
+            "question": "This weekend I plan to",
+            "title": "Super fun weekend"
+        },
+        {
+            "id": 34,
+            "type": "written",
+            "question": "This weekend I plan to",
+            "title": "Keep on keeping on"
         }
     ],
     "FinalQuestions": [
