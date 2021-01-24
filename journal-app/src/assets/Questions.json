@@ -577,27 +577,32 @@
         {
             "id": 1,
             "type": "written",
-            "question": ""
+            "question": "",
+            "output": ""
         },
         {
             "id": 1,
             "type": "written",
-            "question": ""
+            "question": "",
+            "output": ""
         },
         {
             "id": 1,
             "type": "written",
-            "question": ""
+            "question": "",
+            "output": ""
         },
         {
             "id": 1,
             "type": "written",
-            "question": ""
+            "question": "",
+            "output": ""
         },
         {
             "id": 1,
             "type": "written",
-            "question": ""
+            "question": "",
+            "output": ""
         }
     ]
 }
