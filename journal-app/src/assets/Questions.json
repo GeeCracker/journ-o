@@ -247,7 +247,7 @@
         }
     ],
     "FinalQuestions": [
-        [1, 2, 3, 4],
+        [1, 2, 3, 4, 8],
         {
             "id": 1,
             "type": "written",
@@ -294,17 +294,87 @@
         {
             "id": 5,
             "type": "written",
-            "question": "I'm glad that I was able to"
+            "question": "I'm glad that I was able to",
+            "output": "I'm glad that I was able to"
         },
         {
             "id": 6,
             "type": "written",
-            "question": "today wasn't too special because"
+            "question": "today wasn't too special because",
+            "output": "today wasn't too special because"
         },
         {
             "id": 7,
             "type": "written",
-            "question": "The most tiring thing today was"
+            "question": "The most tiring thing today was",
+            "output": "The most tiring thing today was"
+        },
+        {
+            "id": 8,
+            "type": "mc",
+            "question": "Would I consider today to be a success?",
+            "choices": [
+                {
+                    "answer": "For sure!",
+                    "output": "Today was definitely a success;",
+                    "targetid": 9,
+                    "picked": 0
+                },
+                {
+                    "answer": "Yeah",
+                    "output": "Today was successful, yeah.",
+                    "targetid": 10,
+                    "picked": 0
+                },
+                {
+                    "answer": "Not really",
+                    "output": "Today wasn't really what I was hoping for,",
+                    "targetid": 11,
+                    "picked": 0
+                },
+                {
+                    "answer": "Definitely not",
+                    "output": "I failed everything today.",
+                    "targetid": 12,
+                    "picked": 0
+                },
+                {
+                    "answer": "Success is a social construct",
+                    "output": "I would talk about how successful I was, but success is a social construct;",
+                    "targetid": 13,
+                    "picked": 0
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "type": "written",
+            "question": "What do I feel the most acomplished about?",
+            "output": "I feel the most acomplished about"
+        },
+        {
+            "id": 10,
+            "type": "written",
+            "question": "What did I enjoy doing?",
+            "output": "I enjoyed doing"
+        },
+        {
+            "id": 11,
+            "type": "written",
+            "question": "What did I miss doing?",
+            "output": "I wasn't able to do"
+        },
+        {
+            "id": 12,
+            "type": "written",
+            "question": "Why did I not get anything done?",
+            "output": "I am a failture because"
+        },
+        {
+            "id": 13,
+            "type": "written",
+            "question": "Why is success a social construct?",
+            "output": "this is because"
         }
     ],
     "MainQuestions": [
@@ -440,7 +510,7 @@
         {
             "id": 14,
             "type": "written",
-            "question": "What did you eat today?",
+            "question": "What did I eat today?",
             "output": "Today I filled my wittle tum-tum with"
         },
         {
