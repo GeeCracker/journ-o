@@ -4,6 +4,7 @@ import './styles.css';
 
 import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router';
+import firebase from '../firebase.js';
 
 class Topbar extends React.Component {
     constructor(props) {
