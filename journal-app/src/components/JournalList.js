@@ -9,10 +9,7 @@ class JournalList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            journals: [
-                ['I went on a walk','Jan 23, 2021','Text text text.'],
-                ['I went on a walk','Jan 23, 2021','Text text text.']
-            ]
+            journals: []
         };
     }
     getJournalIDs(){
@@ -71,7 +68,7 @@ class JournalList extends React.Component {
         return (
             <div>
 
-            {this.state.journals.map((item, index) => (
+            {this.state.journals.reverse().map((item, index) => (
                 <div class="journal-box">
                 
                 <div class="date">{item[1]}</div>
