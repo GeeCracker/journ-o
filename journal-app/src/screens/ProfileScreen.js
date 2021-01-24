@@ -34,7 +34,7 @@ class Profile extends React.Component {
 
         <div class="profile-left">
           <div class="profile-circle"></div>
-          <div class="profile-name">{this.state.username}</div>
+          <div class="profile-name">{this.state.username+"'s journ-o"}</div>
         </div>
         <div class="profile-right">
           <Link to="/newjournal" style={{textDecoration: 'none'}}>
