@@ -24,7 +24,7 @@ class QuestionCard extends React.Component {
                 </div>
                 <div class="qcard-bottom">
                     <div class="box">
-                        {this.state.isMC ? 
+                        {this.props.type ? 
                         this.props.question.choices.map((item, index) => (
                             <FillButton 
                                 text={item.answer} // answer option text

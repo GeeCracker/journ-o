@@ -3,52 +3,56 @@ import React from 'react';
 import QuestionCard from '../components/QuestionCard';
 import Topbar from '../components/Topbar';
 
+import masterQuestions from '../assets/Questions.json';
+
 class NewJournal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      questions: [
-        {
-          id: 1,
-          type: 'mc',
-          question: 'How much milk did you drink today?',
-          choices: [
-            {
-              answer: 'so much.',
-              targetid: 2,
-              picked: 0
-            },
-            {
-              answer: 'I suck a cow tiddy.',
-              targetid: 3,
-              picked: 0
-            },
-            {
-              answer: 'I\'m lactose swactose my guy.',
-              targetid: 4,
-              picked: 0
-            }
-          ]
-        },
-        {
-          id: 2,
-          type: 'written',
-          question: 'How do you doodoo today?',
-          choices: []
-        }
-      ],
+      questions: [],
       currentQuestion: 0,
-      currentChoice: 0,
+      currentChoice: null, // current mc question choice index
       date: 'Jan 25, 2021',
-      left: false,
-      right: true
+      stage: 0 // stage of questions, 0-starting, 1-final, 2-main
     };
 
     this.handleClick = this.handleClick.bind(this);
   }
 
-  componentDidMount() {
-    // TODO questions
+  componentWillMount() {
+    // Getting initial starting question
+    var validIds = masterQuestions.StartingQuestions[0];
+    var rand = Math.floor(Math.random() * validIds.length) + 0 ;
+    var q = masterQuestions.StartingQuestions[validIds[rand]];
+    this.setState({
+      questions: [...this.state.questions, q],
+    });
+  }
+
+  generateFinalQuestion() {
+    var validIds = masterQuestions.StartingQuestions[0];
+    var rand = Math.floor(Math.random() * validIds.length) + 0 ;
+    var q = masterQuestions.StartingQuestions[validIds[rand]];
+    this.setState({
+      questions: [...this.state.questions, q],
+    });
+  }
+
+  generateNextQuestion() {
+
+  }
+
+  gotoNextQuestion() {
+    // question when we have a targetid
+    var qid = this.state.questions[this.state.currentQuestion].choices[this.state.currentChoice].targetid;
+    var q
+    if(this.state.stage == 0) {
+      q = masterQuestions.StartingQuestions[qid];
+    }
+    this.setState({
+      questions: [...this.state.questions, q],
+    });
+    this.setState({currentQuestion: this.state.currentQuestion+1})
   }
 
   handleClick(index){
@@ -62,8 +66,13 @@ class NewJournal extends React.Component {
 
   rightClick = () => {
     // right arrow click function
-    // TODO generate next question function
-    this.setState({currentQuestion: this.state.currentQuestion+1})
+    if (this.state.currentQuestion == this.state.questions.length-1) {
+      if(this.state.currentChoice) {
+        this.gotoNextQuestion();
+      }
+    } else {
+      this.setState({currentQuestion: this.state.currentQuestion+1})
+    }
   }
 
   widthCalc() {
@@ -80,6 +89,7 @@ class NewJournal extends React.Component {
     var left = this.state.currentQuestion != 0;
     var right = true;
     var finish = this.state.currentQuestion >= 5;
+    var mc = this.state.questions[this.state.currentQuestion].type == "mc";
     const prog = {
       backgroundColor: '#16C79A',
       height: '100%',
@@ -99,7 +109,7 @@ class NewJournal extends React.Component {
 
           <QuestionCard  
             question={this.state.questions[this.state.currentQuestion]}
-            type={this.state.questions[this.state.currentQuestion].type}
+            type={mc}
             choice={this.state.currentChoice} // active button on mc questions
             handleClick={this.handleClick} // button click for an mc question
             />
