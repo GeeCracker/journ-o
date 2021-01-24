@@ -31,8 +31,6 @@ class LoginForm extends React.Component {
 
     handleSubmit(event) {
         // SUBMIT BUTTON EVENT HANDLER
-        //alert('A name was submitted: ' + this.state.email);
-        //alert('A password was submitted: ' + this.state.password);
         firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
             .then((userCredential) => {
                 // Signed in
@@ -51,7 +49,6 @@ class LoginForm extends React.Component {
             .catch((error) => {
                 var errorCode = error.code;
                 var errorMessage = error.message;
-                alert(errorMessage);
             });
         event.preventDefault();
         

@@ -37,9 +37,6 @@ class SignupForm extends React.Component {
 
     handleSubmit(event) {
         // SUBMIT BUTTON EVENT HANDLER
-        //alert('A name was submitted: ' + this.state.username);
-        //alert('A password was submitted: ' + this.state.password);
-        //alert('A email was submitted: ' + this.state.email);
         firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
             .then((userCredential) => {
                 // Signed in 

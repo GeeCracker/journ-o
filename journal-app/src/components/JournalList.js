@@ -28,7 +28,6 @@ class JournalList extends React.Component {
         firebase.database().ref('/users/'+uid+'/journals/'+jid+"/title").on("value", function(snapshot){
             title = snapshot.val();
         })
-        console.log(title)
         return title
     }
     getJournalDate(jid,uid){
@@ -36,7 +35,6 @@ class JournalList extends React.Component {
         firebase.database().ref('/users/'+uid+'/journals/'+jid+"/date").on("value", function(snapshot){
             date = snapshot.val();
         })
-        console.log(date)
         return date
     }
     getJournalContent(jid,uid){
@@ -44,13 +42,11 @@ class JournalList extends React.Component {
         firebase.database().ref('/users/'+uid+'/journals/'+jid+"/content").on("value", function(snapshot){
             content = snapshot.val();
         })
-        console.log(content)
         return content
     }
 
     async componentWillMount(){
         var jids = this.getJournalIDs()
-        console.log(jids)
         var uid = sessionStorage.getItem('uid')
         for (var i = 0; i < jids.length; i++){
              await this.setState({journals: [...this.state.journals,[
@@ -60,7 +56,6 @@ class JournalList extends React.Component {
             ]],
                 })
         }
-        console.log(this.state.journals)
     }
 
     render() {

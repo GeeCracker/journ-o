@@ -178,9 +178,6 @@ class NewJournal extends React.Component {
       date: newEntry[1],
       content: newEntry[2],
     })
-    alert(newEntry[0]);
-    alert(newEntry[1]);
-    alert(newEntry[2]);
     this.setState({doneentry: true})
   }
 
@@ -188,8 +185,7 @@ class NewJournal extends React.Component {
     if(this.state.doneentry === true){
       return <Redirect to='/profile'/>
     }
-
-    console.log(this.state.content);
+    
     var left = this.state.currentQuestion != 0;
     var right = true;
     var finish = this.state.currentQuestion >= 5;

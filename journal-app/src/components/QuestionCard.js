@@ -11,10 +11,6 @@ class QuestionCard extends React.Component {
             isMC: this.props.type == 'mc'
         };
     }
-
-    onButtonClick = () => {
-        alert("swag");
-    }
     
     render() {
         return (
