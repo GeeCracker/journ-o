@@ -97,6 +97,7 @@ class NewJournal extends React.Component {
     var title = this.state.questions[this.state.currentQuestion].title;
     var sentence = this.state.questions[this.state.currentQuestion].question+" "+this.state.answer+". ";
     this.setState({title: title});
+    this.setState({content: this.state.content + sentence});
     this.setState({answer: ''});
   }
 
