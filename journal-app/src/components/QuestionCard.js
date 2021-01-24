@@ -8,12 +8,19 @@ class QuestionCard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isMC: this.props.type == 'mc'
+            isMC: this.props.type == 'mc',
+            answer: ''
         };
+
+        this.answerChanged = this.answerChanged.bind(this);
     }
 
     onButtonClick = () => {
         alert("swag");
+    }
+
+    answerChanged(event) {
+        this.setState({answer: event.target.value});
     }
     
     render() {
@@ -32,9 +39,13 @@ class QuestionCard extends React.Component {
                                 index={index} // index of choice
                                 handleClick={this.props.handleClick}
                             />
-                        ))
-                        : 
-                        <input type='text' class="qcard-write" placeholder="type here..."/>
+                        )):
+                        
+                        <label>
+                            Answer:
+                            <input type='text' value={this.state.answer} onChange={this.answerChanged}
+                            class="qcard-write" placeholder="Type here..."/>
+                        </label>
                         }
                     </div>
                 </div>
