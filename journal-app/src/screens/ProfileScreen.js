@@ -5,6 +5,8 @@ import './styles.css';
 import Topbar from '../components/Topbar';
 import JournalList from '../components/JournalList';
 
+import { Link } from 'react-router-dom';
+
 class Profile extends React.Component {
     constructor(props) {
         super(props);
@@ -19,7 +21,8 @@ class Profile extends React.Component {
     }
 
     newJournal = () => {
-      alert("new journal button clicked")
+      // Runs when new journal button is clicked
+      console.log("new journal")
     }
 
     render() {
@@ -32,7 +35,9 @@ class Profile extends React.Component {
           <div class="profile-name">{this.state.username}</div>
         </div>
         <div class="profile-right">
-          <button class="full-button" onClick={this.newJournal}>New Journ-o</button>
+          <Link to="/newjournal" style={{textDecoration: 'none'}}>
+            <button class="full-button" onClick={this.newJournal}>New Journ-o</button>
+          </Link>
           <JournalList />
         </div>
 

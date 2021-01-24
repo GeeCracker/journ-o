@@ -6,25 +6,21 @@ class FillButton extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            clicked: false,
+            clicked: this.props.picked == 1,
         };
-    }
-
-    clicked = () => {
-        this.setState({clicked: !this.state.clicked});
     }
     
     render() {
 
         const style = {
-            display: 'block',
+            display: 'inline-block',
             maxWidth: 300,
             paddingLeft: 20,
             paddingRight: 20,
             paddingTop: 10,
             paddingBottom: 10,
-            backgroundColor: this.state.clicked ? 'white' : '#16C79A',
-            color: this.state.clicked ? '#16C79A' : 'white',
+            backgroundColor: this.props.active == 1 ? 'white' : '#16C79A',
+            color: this.props.active == 1 ? '#16C79A' : 'white',
             textAlign: 'center',
             borderRadius: 100,
             marginLeft: 10,
@@ -32,7 +28,7 @@ class FillButton extends React.Component {
         };
 
         return (
-            <div style={style} onClick={this.clicked}>
+            <div style={style} onClick={() => this.props.handleClick(this.props.index)}>
                 {this.props.text}
             </div>
         );

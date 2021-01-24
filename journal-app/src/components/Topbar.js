@@ -27,8 +27,10 @@ class Topbar extends React.Component {
 
         return (
             <div class="topbar">
+
                 <div class="topbar-title">Journ-o</div>
                 <div class="outline-button" onClick={this.signOut}>sign out</div>
+
             </div>
         );
     }
