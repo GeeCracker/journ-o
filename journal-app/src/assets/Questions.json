@@ -608,7 +608,7 @@
         {
             "id": 8,
             "type": "written",
-            "question": "this was because",
+            "question": "This was because",
             "output": "this was because"
         },
         {
@@ -717,19 +717,19 @@
         {
             "id": 23,
             "type": "written",
-            "question": "we chatted about",
+            "question": "We chatted about",
             "output": "we chatted about"
         },
         {
             "id": 24,
             "type": "written",
-            "question": "the conversation was about",
+            "question": "The conversation was about",
             "output": "the conversation was about"
         },
         {
             "id": 25,
             "type": "written",
-            "question": "this was because",
+            "question": "This was because",
             "output": "this was because"
         },
         {
@@ -786,6 +786,49 @@
             "type": "written",
             "question": "This was because",
             "output": "this was because"
+        },
+        {
+            "id": 31,
+            "type": "mc",
+            "question": "How did Jesus bless me today?",
+            "choices": [
+                {
+                    "answer": "By showing me the right path in life",
+                    "output": "Jesus showed me the way",
+                    "targetid": 32,
+                    "picked": 0
+                },
+                {
+                    "answer": "By showing me forgiveness",
+                    "output": "Jesus showed me forgiveness",
+                    "targetid": 33,
+                    "picked": 0
+                },
+                {
+                    "answer": "By showing me his love",
+                    "output": "Jesus showed me his love",
+                    "targetid": 34,
+                    "picked": 0
+                }
+            ]
+        },
+        {
+            "id": 32,
+            "type": "written",
+            "question": "How did Jesus show me the way?",
+            "output": "by"
+        },
+        {
+            "id": 33,
+            "type": "written",
+            "question": "How did Jesus show me forgiveness?",
+            "output": "by"
+        },
+        {
+            "id": 34,
+            "type": "written",
+            "question": "How did Jesus show me his love?",
+            "output": "by"
         }
     ],
     "Formats": [
