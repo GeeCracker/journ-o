@@ -1,6 +1,6 @@
 {
     "StartingQuestions": [
-        [1, 7, 13, 18, 23],
+        [1, 7, 13, 18, 23, 29],
         {
             "id": 1,
             "type": "mc",
@@ -381,7 +381,7 @@
         }
     ],
     "FinalQuestions": [
-        [1, 2, 3, 4, 8],
+        [1, 2, 3, 4, 8, 14, 15, 16, 17],
         {
             "id": 1,
             "type": "written",
@@ -509,6 +509,30 @@
             "type": "written",
             "question": "Why is success a social construct?",
             "output": "this is because"
+        },
+        {
+            "id": 14,
+            "type": "written",
+            "question": "As a final note, what would you like to say about today?",
+            "output": "As a final note,"
+        },
+        {
+            "id": 15,
+            "type": "written",
+            "question": "Any last comments about the state of the world?",
+            "output": "To conclude, about the state of the world"
+        },
+        {
+            "id": 16,
+            "type": "written",
+            "question": "What would you say if your mother told you she was pregnant with another child?",
+            "output": "Overall, today made me say:"
+        },
+        {
+            "id": 17,
+            "type": "written",
+            "question": "Just type 'yes'. Trust me.",
+            "output": "As a final note, if someone asked me what my favorite thing about journ-o was, I would simply say"
         }
     ],
     "MainQuestions": [
