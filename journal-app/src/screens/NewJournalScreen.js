@@ -4,6 +4,8 @@ import QuestionCard from '../components/QuestionCard';
 import Topbar from '../components/Topbar';
 
 import masterQuestions from '../assets/Questions.json';
+import firebase from '../firebase.js';
+import { Redirect } from 'react-router';
 
 class NewJournal extends React.Component {
   constructor(props) {
@@ -22,7 +24,8 @@ class NewJournal extends React.Component {
       currentChoice: 0, // current mc question choice index
       date: 'Jan 25, 2021',
       stage: 0, // stage of questions, 0-starting, 1-final, 2-main
-      answer: ''
+      answer: '',
+      doneentry: false
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -151,12 +154,27 @@ class NewJournal extends React.Component {
       this.state.date,
       this.state.content
     ]
+    var uid = sessionStorage.getItem('uid')
+    var entrynum
+    firebase.database().ref('/users/'+uid+'/journals').on("value", function(snapshot){
+      entrynum = snapshot.numChildren();
+  })
+    firebase.database().ref('/users/'+uid+ '/journals/' + (entrynum+1)).set({
+      title: newEntry[0],
+      date: newEntry[1],
+      content: newEntry[2],
+    })
     alert(newEntry[0]);
     alert(newEntry[1]);
     alert(newEntry[2]);
+    this.setState({doneentry: true})
   }
 
   render() {
+    if(this.state.doneentry === true){
+      return <Redirect to='/profile'/>
+    }
+
     console.log(this.state.content);
     var left = this.state.currentQuestion != 0;
     var right = true;
