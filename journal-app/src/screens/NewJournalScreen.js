@@ -11,7 +11,7 @@ class NewJournal extends React.Component {
     this.state = {
       questions: [],
       currentQuestion: 0,
-      currentChoice: null, // current mc question choice index
+      currentChoice: 0, // current mc question choice index
       date: 'Jan 25, 2021',
       stage: 0 // stage of questions, 0-starting, 1-final, 2-main
     };
