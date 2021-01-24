@@ -18,11 +18,13 @@ class Profile extends React.Component {
     componentDidMount() {
       // Function will run on component load
       var uid = sessionStorage.getItem('uid')
-      var user;
-        firebase.database().ref('/users/'+uid+'/user').on("value", function(snapshot){
-            user = snapshot.val();
-        })
+      var user
+      firebase.database().ref('/users/'+uid+'/user').on("value", function(snapshot){
+        user = snapshot.val();
+      })
       this.setState({username: user})
+      
+
     }
 
     newJournal = () => {
