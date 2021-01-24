@@ -4,7 +4,7 @@ import './styles.css';
 
 import Topbar from '../components/Topbar';
 import JournalList from '../components/JournalList';
-
+import firebase from '../firebase.js';
 import { Link } from 'react-router-dom';
 
 class Profile extends React.Component {
@@ -17,7 +17,12 @@ class Profile extends React.Component {
 
     componentDidMount() {
       // Function will run on component load
-      this.setState({username: "Name Nameson's Journ-o"})
+      var uid = sessionStorage.getItem('uid')
+      var user;
+        firebase.database().ref('/users/'+uid+'/user').on("value", function(snapshot){
+            user = snapshot.val();
+        })
+      this.setState({username: user})
     }
 
     newJournal = () => {
