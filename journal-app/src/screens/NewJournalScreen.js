@@ -20,6 +20,7 @@ class NewJournal extends React.Component {
       title: '',
       date: date,
       content: '',
+      lastsentence: '',
       currentQuestion: 0,
       currentChoice: 0, // current mc question choice index
       stage: 0, // stage of questions, 0-starting, 1-final, 2-main
@@ -42,7 +43,7 @@ class NewJournal extends React.Component {
   }
 
   generateFinalQuestion() {
-    // get question from FinalQuestion list
+    // get question from Final Question list
     this.setState({stage: 1});
     var validIds = masterQuestions.FinalQuestions[0];
     var rand = Math.floor(Math.random() * validIds.length) + 0;
@@ -101,6 +102,13 @@ class NewJournal extends React.Component {
     this.setState({answer: ''});
   }
 
+  saveFinalResponse() {
+    // save question response to journal list
+    var sentence = this.state.questions[this.state.currentQuestion].output+" "+this.state.answer+". ";
+    this.setState({lastsentence: sentence});
+    this.setState({answer: ''});
+  }
+
   saveResponse() {
     // save question response to journal list
     var sentence = this.state.questions[this.state.currentQuestion].output+" "+this.state.answer+". ";
@@ -130,7 +138,10 @@ class NewJournal extends React.Component {
           this.saveTitleResponse();
           this.generateFinalQuestion();
         // if current stage is final question, move onto main questions stage
-        } else if(this.state.stage >= 1){
+        } else if(this.state.stage == 1) {
+          this.saveFinalResponse();
+          this.generateNextQuestion();
+        } else if(this.state.stage > 1){
           this.saveResponse();
           this.generateNextQuestion();
         }
@@ -155,7 +166,7 @@ class NewJournal extends React.Component {
     var newEntry = [
       this.state.title,
       this.state.date,
-      this.state.content
+      this.state.content+this.state.lastsentence
     ]
     var uid = sessionStorage.getItem('uid')
     var entrynum
@@ -210,7 +221,6 @@ class NewJournal extends React.Component {
             />
           
           <div class="navbar-box">
-            {left ? <div class="arrow-left" onClick={this.leftClick}/> : null}
             {right ? <div class="arrow-right" onClick={this.rightClick}/> : null}
           </div>
 
