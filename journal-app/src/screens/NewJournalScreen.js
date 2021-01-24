@@ -95,7 +95,9 @@ class NewJournal extends React.Component {
     // save title to journal
     // only called when final inital question is answered.
     var title = this.state.questions[this.state.currentQuestion].title;
+    var sentence = this.state.questions[this.state.currentQuestion].question+" "+this.state.answer+". ";
     this.setState({title: title});
+    this.setState({answer: ''});
   }
 
   saveResponse() {
