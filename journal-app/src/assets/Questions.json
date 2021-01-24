@@ -456,7 +456,7 @@
                 },
                 {
                     "answer": "Yeah",
-                    "output": "Today was successful, yeah.",
+                    "output": "I'd say today was very successful.",
                     "targetid": 10,
                     "picked": 0
                 },
@@ -705,7 +705,7 @@
             "id": 20,
             "type": "written",
             "question": "What was a challenging thing I experienced today?",
-            "output": "I face a challenge when"
+            "output": "I faced a challenge when"
         },
         {
             "id": 21,
