@@ -574,20 +574,20 @@
         {
             "id": 14,
             "type": "written",
-            "question": "What did you eat today?",
+            "question": "What did I eat today?",
             "output": "Today I filled my wittle tum-tum with"
         },
         {
             "id": 15,
             "type": "written",
             "question": "What friends did I talk to today?",
-            "output": "Today, I talked to my friends"
+            "output": "Today, I talked with"
         },
         {
             "id": 16,
             "type": "written",
             "question": "What did I get done that I've been putting off?",
-            "output": "I've been procrastinating for a while, but finally finished"
+            "output": "I'd been procrastinating for a while, but finally finished"
         },
         {
             "id": 17,
@@ -604,14 +604,14 @@
         {
             "id": 19,
             "type": "written",
-            "question": "When part of the day was I the happiest?",
+            "question": "What happenned today that made me happy?",
             "output": "Today, I was very happy when"
         },
         {
             "id": 20,
             "type": "written",
             "question": "What was a challenging thing I experienced today?",
-            "output": "I experienced difficulties when"
+            "output": "I face a challenge when"
         },
         {
             "id": 21,
@@ -626,19 +626,19 @@
             "choices": [
                 {
                     "answer": "Yes, we talked a lot",
-                    "output": "We talked a lot,",
+                    "output": "I talked a lot with my family today,",
                     "targetid": 23,
                     "picked": 0
                 },
                 {
                     "answer": "We connected a little bit",
-                    "output": "We had a quick conversation,",
+                    "output": "I had a quick conversation with my family today,",
                     "targetid": 24,
                     "picked": 0
                 },
                 {
-                    "answer": "No",
-                    "output": "I didn't contact my family today,",
+                    "answer": "Not really",
+                    "output": "I didn't really interact with my family today,",
                     "targetid": 25,
                     "picked": 0
                 }
