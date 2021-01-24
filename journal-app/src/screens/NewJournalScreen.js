@@ -8,11 +8,18 @@ import masterQuestions from '../assets/Questions.json';
 class NewJournal extends React.Component {
   constructor(props) {
     super(props);
+
+    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    var today = new Date();
+    var date = months[today.getMonth()] + ' ' + today.getDate() + ', ' + today.getFullYear();
+
     this.state = {
       questions: [],
+      title: '',
+      date: date,
+      content: '',
       currentQuestion: 0,
       currentChoice: 0, // current mc question choice index
-      date: 'Jan 25, 2021',
       stage: 0 // stage of questions, 0-starting, 1-final, 2-main
     };
 
@@ -69,6 +76,26 @@ class NewJournal extends React.Component {
     this.setState({currentQuestion: this.state.currentQuestion+1})
   }
 
+  saveMCResponse() {
+    // save question response to journal list
+    var sentence = this.state.questions[this.state.currentQuestion].choices[this.state.currentChoice].output+" ";
+    this.setState({content: this.state.content + sentence});
+  }
+
+  saveTitleResponse() {
+    // save title to journal
+    // only called when final inital question is answered.
+    var title = this.state.questions[this.state.currentQuestion].title;
+    this.setState({title: title});
+  }
+
+  saveResponse() {
+    // save question response to journal list
+    var sentence = this.state.questions[this.state.currentQuestion].output+" ";
+    this.setState({content: this.state.content + sentence});
+  }
+
+
   handleClick(index){
     this.setState({currentChoice: index});
   }
@@ -82,13 +109,16 @@ class NewJournal extends React.Component {
     // right arrow click function
     if (this.state.currentQuestion == this.state.questions.length-1) {
       if(this.state.questions[this.state.currentQuestion].type == "mc") {
+        this.saveMCResponse();
         this.gotoNextQuestion();
       } else {
         // if current stage is initial, move on to final question
         if(this.state.stage == 0){
+          this.saveTitleResponse();
           this.generateFinalQuestion();
         // if current stage is final question, move onto main questions stage
         } else if(this.state.stage >= 1){
+          this.saveResponse();
           this.generateNextQuestion();
         }
       }
@@ -107,7 +137,20 @@ class NewJournal extends React.Component {
     return str;
   }
 
+  finishJournal = () => {
+    // finish Journ=o button function
+    var newEntry = [
+      this.state.title,
+      this.state.date,
+      this.state.content
+    ]
+    alert(newEntry[0]);
+    alert(newEntry[1]);
+    alert(newEntry[2]);
+  }
+
   render() {
+    console.log(this.state.content);
     var left = this.state.currentQuestion != 0;
     var right = true;
     var finish = this.state.currentQuestion >= 5;
@@ -142,7 +185,7 @@ class NewJournal extends React.Component {
           </div>
 
           {finish ? 
-          <button class="done-full-button" onClick={this.newJournal}>Finish Journ-o</button>
+          <button class="done-full-button" onClick={this.finishJournal}>Finish Journ-o</button>
           : null}
         </div>
       );
