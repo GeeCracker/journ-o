@@ -41,7 +41,7 @@
         {
             "id": 2,
             "type": "written",
-            "question": "The best thing that happeded today was",
+            "question": "The best thing that happened today was",
             "title": "An incredible day"
         },
         {
@@ -114,7 +114,7 @@
         {
             "id": 9,
             "type": "written",
-            "question": "I was able to get tasks done becuse",
+            "question": "I was able to get tasks done because",
             "title": "A productive day"
         },
         {
@@ -196,7 +196,7 @@
             "question": "Did anything out of the ordinary happen today?",
             "choices": [
                 {
-                    "answer": "something amaing!",
+                    "answer": "Something amazing!",
                     "output": "Today was amazing, guess what happened today?",
                     "targetid": 19,
                     "picked": 0
@@ -236,7 +236,7 @@
         {
             "id": 21,
             "type": "written",
-            "question": "I've never seen something like it! Today, ",
+            "question": "I've never seen something like it! Today,",
             "title": "Today was no ordinary day"
         },
         {
@@ -284,7 +284,7 @@
                     "picked": 0
                 },
                 {
-                    "answer": "exhausted.",
+                    "answer": "Exhausted.",
                     "output": "I'm absolutely exhausted.",
                     "targetid": 7,
                     "picked": 0
@@ -299,7 +299,7 @@
         {
             "id": 6,
             "type": "written",
-            "question": "today wasn't too special becuase"
+            "question": "today wasn't too special because"
         },
         {
             "id": 7,
@@ -315,13 +315,13 @@
             "question": "Was I attacked by a Canada goose?",
             "choices": [
                 {
-                    "answer": "many times",
+                    "answer": "Many times",
                     "output": "I barely survived all the geese attacks,",
                     "targetid": 2,
                     "picked": 0
                 },
                 {
-                    "answer": "just once",
+                    "answer": "Just once",
                     "output": "A goose tried to nibble me today,",
                     "targetid": 3,
                     "picked": 0
@@ -349,8 +349,8 @@
         {
             "id": 4,
             "type": "written",
-            "question": "I'd rater stay inside,",
-            "output": "I'd rater stay inside,"
+            "question": "I'd rather stay inside,",
+            "output": "I'd rather stay inside,"
         },
         {
             "id": 5,
@@ -367,7 +367,7 @@
         {
             "id": 7,
             "type": "mc",
-            "question": "Did I go outside today",
+            "question": "Did I go outside today?",
             "choices": [
                 {
                     "answer": "No",
