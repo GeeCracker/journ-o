@@ -315,7 +315,7 @@
         {
             "id": 29,
             "type": "mc",
-            "question": "",
+            "question": "Was today a special day?",
             "choices": [
                 {
                     "answer": "It was a holiday!",
