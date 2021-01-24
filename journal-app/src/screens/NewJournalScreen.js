@@ -98,8 +98,9 @@ class NewJournal extends React.Component {
 
   saveResponse() {
     // save question response to journal list
-    var sentence = this.state.questions[this.state.currentQuestion].output+" ";
+    var sentence = this.state.questions[this.state.currentQuestion].output+" "+this.state.answer+". ";
     this.setState({content: this.state.content + sentence});
+    this.setState({answer: ''});
   }
 
 
