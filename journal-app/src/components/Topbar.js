@@ -16,7 +16,6 @@ class Topbar extends React.Component {
 
     signOut = () => {
         var uid = sessionStorage.getItem('uid')
-        alert(uid);
         this.setState({loggedout: true})
     }
     

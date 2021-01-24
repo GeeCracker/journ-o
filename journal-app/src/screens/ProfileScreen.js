@@ -27,11 +27,6 @@ class Profile extends React.Component {
 
     }
 
-    newJournal = () => {
-      // Runs when new journal button is clicked
-      console.log("new journal")
-    }
-
     render() {
       
       return (
@@ -43,7 +38,7 @@ class Profile extends React.Component {
         </div>
         <div class="profile-right">
           <Link to="/newjournal" style={{textDecoration: 'none'}}>
-            <button class="full-button" onClick={this.newJournal}>New Journ-o</button>
+            <button class="full-button">New Journ-o</button>
           </Link>
           <JournalList />
         </div>
