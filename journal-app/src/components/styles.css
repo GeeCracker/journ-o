@@ -170,3 +170,12 @@ input[type=submit]:hover {
     border-bottom: 1px solid white;
     font-size: 20px;
 }
+
+.box label {
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    width: fit-content;
+    color: white;
+    font-size: 20px;
+}
