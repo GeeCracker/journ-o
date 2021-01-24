@@ -308,7 +308,7 @@
         }
     ],
     "MainQuestions": [
-        [1, 5, 6, 7, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
+        [1, 5, 6, 7, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 26],
         {
             "id": 1,
             "type": "mc",
@@ -526,6 +526,61 @@
             "id": 25,
             "type": "written",
             "question": "this was because",
+            "output": "this was because"
+        },
+        {
+            "id": 26,
+            "type": "mc",
+            "question": "What did I clean today?",
+            "choices": [
+                {
+                    "answer": "I cleaned my house!",
+                    "output": "I cleaned my house today,",
+                    "targetid": 27,
+                    "picked": 0
+                },
+                {
+                    "answer": "I washed my car!",
+                    "output": "I washed my car today,",
+                    "targetid": 28,
+                    "picked": 0
+                },
+                {
+                    "answer": "I took a shower!",
+                    "output": "I took a shower today,",
+                    "targetid": 29,
+                    "picked": 0
+                },
+                {
+                    "answer": "I'm a filthy human being...",
+                    "output": "I didn't clean anything today,",
+                    "targetid": 30,
+                    "picked": 0
+                }
+            ]
+        },
+        {
+            "id": 27,
+            "type": "written",
+            "question": "My house was extremely",
+            "output": "it was really"
+        },
+        {
+            "id": 28,
+            "type": "written",
+            "question": "My car was covered in",
+            "output": "it was covered in"
+        },
+        {
+            "id": 29,
+            "type": "written",
+            "question": "I smelled really",
+            "output": "this was because I smelled really"
+        },
+        {
+            "id": 30,
+            "type": "written",
+            "question": "This was because",
             "output": "this was because"
         }
     ],
