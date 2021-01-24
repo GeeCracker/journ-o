@@ -432,8 +432,8 @@
         {
             "id": 14,
             "type": "written",
-            "question": "",
-            "output": ""
+            "question": "What did you eat today?",
+            "output": "Today I filled my wittle tum-tum with"
         },
         {
             "id": 15,
