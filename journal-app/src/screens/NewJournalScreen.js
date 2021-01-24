@@ -22,7 +22,6 @@ class NewJournal extends React.Component {
       content: '',
       currentQuestion: 0,
       currentChoice: 0, // current mc question choice index
-      date: 'Jan 25, 2021',
       stage: 0, // stage of questions, 0-starting, 1-final, 2-main
       answer: '',
       doneentry: false
