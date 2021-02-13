@@ -1,4 +1,4 @@
-## journ-o
+# journ-o
 journ-o offers a frictionless online journaling experience, it was developed using React and Firebase.
 This project was developed during the QHacks 2021 hackathon from Jan 22-24 2021.
 
